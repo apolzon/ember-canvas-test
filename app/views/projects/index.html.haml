@@ -1,11 +1,2 @@
-Please
-%a click here
-to create a new project
-
-%br
-
-or select one from below:
-
-%ul
-  - @projects.each do |project|
-    %li= project.name
+%script{type: "text/x-handlebars"}
+  {{outlet}}

@@ -1,0 +1,20 @@
+<h1>Editing {{project.name}}</h1>
+
+Response: {{fileResponse}}
+
+<label>Project Name:</label>
+{{view Ember.TextField value=project.name}}
+
+{{file-upload model_id=project.id project=project store=store}}
+
+<br/>
+
+{{#each project.images}}
+  <img {{bind-attr src=this.url}} />
+  <br/>
+{{/each}}
+
+<br/>
+{{#link-to "projects.index"}}
+  Back to index
+{{/link-to}}

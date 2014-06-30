@@ -1,0 +1,11 @@
+<h1>Viewing {{name}}</h1>
+
+{{#each images}}
+  <img {{bind-attr src=this.url}} />
+  <br/>
+{{/each}}
+
+<br/>
+{{#link-to "projects.index"}}
+  Back to index
+{{/link-to}}

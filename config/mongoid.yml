@@ -34,10 +34,10 @@ development:
   # Configure Mongoid specific options. (optional)
   options:
     # Includes the root model name in json serialization. (default: false)
-    # include_root_in_json: false
+    include_root_in_json: true
 
     # Include the _type field in serializaion. (default: false)
-    # include_type_for_serialization: false
+    include_type_for_serialization: true
 
     # Preload all models in development, needed when models use
     # inheritance. (default: false)
