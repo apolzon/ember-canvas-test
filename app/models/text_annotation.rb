@@ -2,6 +2,7 @@ class TextAnnotation
   include Mongoid::Document
 
   field :body, type: String
-  field :location, type: Point
+  field :x, type: String
+  field :y, type: String
   embedded_in :image
 end

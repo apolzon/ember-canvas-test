@@ -1,16 +1,18 @@
 <h1>Editing {{project.name}}</h1>
 
-Response: {{fileResponse}}
-
 <label>Project Name:</label>
-{{view Ember.TextField value=project.name}}
+{{view Ember.TextField value=project.name focus-out="updateProject"}}
+
+<br/>
 
 {{file-upload model_id=project.id project=project store=store}}
 
 <br/>
 
+<h2>Image Count: {{project.images.length}}</h2>
+
 {{#each project.images}}
-  {{canvas-image src=this.url}}
+  {{canvas-image image=this store=store project=project}}
   <br/>
 {{/each}}
 

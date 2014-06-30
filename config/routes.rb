@@ -5,4 +5,5 @@ Rails.application.routes.draw do
       post :upload_files
     end
   end
+  resources :box_annotations
 end
