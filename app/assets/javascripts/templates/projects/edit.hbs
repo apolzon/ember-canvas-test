@@ -10,7 +10,7 @@ Response: {{fileResponse}}
 <br/>
 
 {{#each project.images}}
-  <img {{bind-attr src=this.url}} />
+  {{canvas-image src=this.url}}
   <br/>
 {{/each}}
 

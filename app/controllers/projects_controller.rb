@@ -41,9 +41,6 @@ class ProjectsController < ApplicationController
     image = @project.images.build
     image.attachment = params[:file]
     image.save!
-    Rails.logger.info "LOADED PROJECT #{@project.name}"
-    Rails.logger.info "PROJECT.files: #{@project.images.length}"
-    # render json: {success: true, url: image.attachment.url}
     render json: ImageSerializer.new(image)
   end
 
