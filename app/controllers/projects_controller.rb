@@ -6,6 +6,14 @@ class ProjectsController < ApplicationController
     respond_with(projects)
   end
 
+  def create
+    respond_with Project.create(project_params)
+  end
+
+  def show
+    respond_with Project.find(params[:id])
+  end
+
   def update
     project = Project.find(params[:id])
     project.update_attributes(project_params)
