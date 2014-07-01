@@ -2,6 +2,7 @@ Arc9Starter.CanvasImageComponent = Ember.Component.extend
   tagName: "canvas"
 
   didInsertElement: ->
+    console.log "component content", @get("content")
     canvas = this.$()
     store = @get("store")
     context = canvas[0].getContext("2d")

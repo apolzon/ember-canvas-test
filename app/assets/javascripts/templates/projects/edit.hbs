@@ -9,6 +9,9 @@
 
 <br/>
 
+<button {{bind-attr class="boxEnabled:tool-enabled"}} {{action "toggleBoxEnabled"}}>Box Mode</button><br/>
+<button {{bind-attr class="textEnabled:tool-enabled"}} {{action "toggleTextEnabled"}}>Text Mode</button><br/>
+
 <h2>Image Count: {{project.images.length}}</h2>
 
 {{#each project.images}}
